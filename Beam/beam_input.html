@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beam calculation</title>
+
+
+    <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.png" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- PLUGINS CSS STYLE -->
+  <link rel="stylesheet" href="../plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../plugins/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="../plugins/slick/slick.css">
+  <link rel="stylesheet" href="../plugins/slick/slick-theme.css">
+  <link rel="stylesheet" href="../plugins/fancybox/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="../plugins/aos/aos.css">
+
+  <!-- CUSTOM CSS -->
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/style2.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav class="navbar main-nav navbar-expand-lg px-2 px-sm-0 py-2 py-lg-0">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><img src="../images/logo.png" alt="logo"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="ti-menu"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Home
+                </a>
+                
+                
+              </li>
+              <li class="nav-item dropdown @@pages">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Teams
+                  <span><i class="ti-angle-down"></i></span>
+                </a>
+                <!-- Dropdown list -->
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item @@team" href="">Sachin kumar</a></li>
+                  <li><a class="dropdown-item @@career" href="">Shanu anand</a></li>
+                  <li><a class="dropdown-item @@blog" href="">Aman raj</a></li>
+                  <li><a class="dropdown-item @@blogSingle" href="">Shashank kashyap</a></li>
+                  
+      
+                 
+                </ul>
+              </li>
+              <li class="nav-item @@about">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item @@contact">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+
+              <li class="nav-item @@login" >
+                <a class="nav-link" href="cgitestfile/test.html">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    
+
+    <div class="container-fluid" style="background-color: #f9f9f9;">
+
+        <div class="container pt-5">
+
+
+
+        
+
+        <div class="card">
+
+            <h4>Beam calculation</h4>
+
+            <form action="./beam_data.py" method="post">
+                <div class="form-row mt-2">
+                  <div class="form-group col-md-4">
+                    <label for="inputEmail4">Enter beam span in  meter:</label>
+                    <input type="text" class="form-control" id="inputEmail4" placeholder="" name="beam_span">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputPassword4">Enter depth of beam(mm):</label>
+                    <input type="text" class="form-control" id="inputPassword4" placeholder="" name="depth_beam">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputPassword4">Enter the width of beam(mm):</label>
+                    <input type="text" class="form-control" id="inputPassword4" placeholder="" name="width_beam">
+                  </div>
+                </div>
+
+                <div class="form-row mt-2">
+                    <div class="form-group col-md-4">
+                      <label for="inputEmail4">Enter live load in kN/m:</label>
+                      <input type="text" class="form-control" id="inputEmail4" placeholder="" name="live_load">
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="inputPassword4">Enter imposed load in kN/m:</label>
+                      <input type="text" class="form-control" id="inputPassword4" placeholder="" name="imp_load">
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="inputPassword4">Enter floor finish in kN/m:</label>
+                      <input type="text" class="form-control" id="inputPassword4" placeholder="" name="floor_finish">
+                    </div>
+                  </div>
+
+                
+                <div class="form-group">
+                  <label for="inputPassword4">Select grade of steel :</label>
+                  <div class="form-check">
+                    <input type="radio" id="html" name="steel_grade" value="250">
+                      <label for="html">250</label>
+                      <input type="radio" id="css" name="steel_grade" value="415">
+                      <label for="css">415</label>
+                      <input type="radio" id="javascript" name="steel_grade" value="500">
+                      <label for="javascript">500</label>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="inputPassword4">Select grade of concrete :</label>
+                  <div class="form-check">
+                    <input type="radio" id="html" name="concrete_grade" value="20">
+                      <label for="html">20</label>
+                      <input type="radio" id="css" name="concrete_grade" value="25">
+                      <label for="css">25</label>
+                      <input type="radio" id="javascript" name="concrete_grade" value="30">
+                      <label for="javascript">30</label>
+                    <input type="radio" id="css" name="concrete_grade" value="35">
+                      <label for="css">35</label>
+                      <input type="radio" id="javascript" name="concrete_grade" value="40">
+                      <label for="javascript">40</label>
+                  </div>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">Calculate</button>
+              </form>
+
+        </div>
+
+    </div>
+
+
+
+    </div>
+
+   
+    
+</body>
+</html>
